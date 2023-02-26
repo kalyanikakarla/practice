@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,7 +18,7 @@ public class MultiBrowser {
     public WebDriver driver;
     DesiredCapabilities desiredCapabilities;
     @Parameters({"Browser"})
-    @BeforeTest
+    @Test
     public void GridSetUp(String browser)
     {
         switch (browser)
@@ -30,7 +31,7 @@ public class MultiBrowser {
                 driver=new ChromeDriver();
                 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
                 try{
-                    driver=new RemoteWebDriver(new URL("http://192.168.251.84:4444"),chromeOptions);
+                    driver=new RemoteWebDriver(new URL("http://kakarlakalyani123:LGLhnIXyxUg1e4hkImh8ybq3EtjK37dsHjambcCzz4gj3UXJFM@hub lamdatest.com/wd/hub"),chromeOptions);
                 }
                 catch(MalformedURLException e)
                 {
